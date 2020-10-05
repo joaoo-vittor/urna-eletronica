@@ -1,0 +1,74 @@
+{
+  "0": {
+      "titulo": "vereador",
+      "numeros": 5,
+      "candidatos": {
+          "27000": {
+              "nome": "Renan Maracajá",
+              "partido": "PSDC",
+              "foto": "img-3.jpg"
+          },
+          "55666": {
+              "nome": "Pimentel Filho",
+              "partido": "PSD",
+              "foto": "img-2.jpg"
+          },
+          "55555": {
+              "nome": "Ivonete Ludgerio",
+              "partido": "PSD",
+              "foto": "img-6.jpg"
+          },
+          "15333": {
+              "nome": "Dr. Olimpio",
+              "partido": "PMDB",
+              "foto": "img-3.jpg"
+          },
+          "65123": {
+              "nome": "Napoleão Maracajá",
+              "partido": "PC do B",
+              "foto": "img-3.jpg"
+          },
+          "40040": {
+              "nome": "Anderson Maia",
+              "partido": "PSB",
+              "foto": "img-2.jpg"
+          }
+      }
+  },
+  "1": {
+      "titulo": "prefeito",
+      "numeros": 2,
+      "candidatos": {
+          "12": {
+              "nome": "Ana Cláudia Vital",
+              "partido": "Podemos",
+              "foto": "img-6.jpg",
+              "vice": {
+                  "nome": "Wellignton Silva",
+                  "partido": "podemos",
+                  "foto": "img-3.jpg"
+              }
+          },
+          "15": {
+              "nome": "Artur Bolinha",
+              "partido": "PSL",
+              "foto": "img-2.jpg",
+              "vice": {
+                  "nome": " Annelise Meneguesso",
+                  "partido": "PSL",
+                  "foto": "img-1.jpg"
+              }
+          },
+          "45": {
+              "nome": "Bruno Cunha Lima",
+              "partido": "PSD",
+              "foto": "img-2.jpg",
+              "vice": {
+                  "nome": "Lucas Ribeiro.",
+                  "partido": "PSC",
+                  "foto": "img-3.jpg"
+              }
+          }
+      }
+  }
+}
