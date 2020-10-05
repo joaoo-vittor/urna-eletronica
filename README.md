@@ -1,3 +1,7 @@
-### Projeto da Urna Eletrônica
+### Projetos feitos em live
 
-Projeto envolvento html, css e JavaScript
+Projeto desenvolvidos em HTML, CSS e JavaScript, durante a live com o professor Bonieky Lacerda da B7Web
+
+----------
+
+## Urna eletrônica
