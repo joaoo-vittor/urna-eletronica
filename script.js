@@ -12,13 +12,14 @@ let numeros = document.querySelector('.info-1-3')
 let etapaAtual = 0
 let numero = ''
 let votoBranco = false
+let votos = []
 
 
 function comecarEtapa() {
   let etapa = etapas[etapaAtual]
 
-  let numeroHTML = ''
   numero = ''
+  let numeroHTML = ''
   votoBranco = false
 
   for (let i = 0; i < etapa.numeros; i++) {
@@ -55,7 +56,14 @@ function atualizaInterface() {
     seuVotoPara.style.display = 'block'
     aviso.style.display = 'block'
     descricao.innerHTML = `Nome : ${candidato.nome} <br>Partido: ${candidato.partido}`
-    lateral.innerHTML = `<div class="info-1-img"><img src="img/${candidato.foto}" alt="imagem">${candidato.legenda}</div>`
+    if (candidato.vice) {
+      lateral.innerHTML += `<div class="info-1-img"><img src="img/${candidato.foto}" alt="imagem">${candidato.legenda}</div>`
+      lateral.innerHTML += `<div class="info-1-img img-menor"><img src="img/${candidato.vfoto}" alt="imagem">${candidato.vlegenda}</div>`
+
+    } else {
+      lateral.innerHTML = `<div class="info-1-img"><img src="img/${candidato.foto}" alt="imagem">${candidato.legenda}</div>`
+    }
+
   } else {
     seuVotoPara.style.display = 'block'
     aviso.style.display = 'block'
@@ -108,11 +116,17 @@ function confirma() {
   let votoConfirmado = false
 
   if (votoBranco === true) {
-    console.log('voto em branco confirmado')
     votoConfirmado = true
+    votos.push({
+      etapa: etapas[etapaAtual].titulo,
+      voto: 'branco'
+    })
   } else if (numero.length === etapa.numeros) {
-    console.log('voto confirmado')
     votoConfirmado = true
+    votos.push({
+      etapa: etapas[etapaAtual].titulo,
+      voto: numero
+    })
   }
 
   if (votoConfirmado) {
@@ -120,10 +134,10 @@ function confirma() {
     if (etapas[etapaAtual] !== undefined) {
       comecarEtapa()
     } else {
-      console.log('FIM')
+      document.querySelector('.tela').innerHTML = '<div class="aviso-gigante pisca">FIM</div>'
+      console.log(votos)
     }
   }
-
 }
 
 
